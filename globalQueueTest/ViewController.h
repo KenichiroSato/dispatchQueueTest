@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController< NSURLConnectionDataDelegate, NSURLConnectionDelegate>
+@property (nonatomic) NSString *srcURL;
+@property (nonatomic) NSURLConnection *conn;
+@property (nonatomic) long total;
+@property (nonatomic) NSMutableData *downloadData;
 
 @end
+
 
